@@ -1,0 +1,22 @@
+{
+  "name": "prisma-jsdom-bytes-issue",
+  "version": "1.0.0",
+  "description": "Minimal reproduction: Prisma Bytes field fails in jsdom environment",
+  "scripts": {
+    "test": "vitest run",
+    "test:node": "vitest run --environment node",
+    "db:setup": "docker compose up -d && sleep 2 && npx prisma migrate deploy",
+    "db:teardown": "docker compose down -v"
+  },
+  "devDependencies": {
+    "@prisma/adapter-pg": "^7.3.0",
+    "jsdom": "^26.0.0",
+    "pg": "^8.13.0",
+    "prisma": "^7.3.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.3.0"
+  }
+}
