@@ -75,3 +75,10 @@ ArrayBuffer.isView(value) || Object.prototype.toString.call(value) === '[object 
 - jsdom: 26.x
 - Node.js: 22.x
 - PostgreSQL: 16
+
+## Project Structure
+
+This reproduction uses Prisma 7's new configuration model:
+- `prisma.config.ts` - Database URL configuration for migrations
+- `prisma/schema.prisma` - Schema without `url` in datasource (Prisma 7 requirement)
+- `src/generated/prisma/` - Generated Prisma client (gitignored)

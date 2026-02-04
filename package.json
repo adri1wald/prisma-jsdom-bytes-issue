@@ -5,7 +5,7 @@
   "scripts": {
     "test": "vitest run",
     "test:node": "vitest run --environment node",
-    "db:setup": "docker compose up -d && sleep 2 && npx prisma migrate deploy",
+    "db:setup": "docker compose up -d && sleep 2 && npx prisma generate && npx prisma migrate deploy",
     "db:teardown": "docker compose down -v"
   },
   "devDependencies": {
